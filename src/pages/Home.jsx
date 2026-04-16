@@ -184,7 +184,7 @@ export default function Home() {
               </div>
 
               <h1 className="mt-5 text-4xl font-bold tracking-tight text-slate-100 md:text-5xl">
-                Silent Suffering Detector
+                Saarthi (Wellness Tracker)
               </h1>
               <p className="mt-4 text-base leading-relaxed text-slate-200/80 md:text-lg">
                 Detect burnout, stress, and emotional decline before crisis happens.

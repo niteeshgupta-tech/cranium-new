@@ -82,7 +82,7 @@ export default function Dashboard() {
                   <div>
                     <div className="flex flex-wrap items-center gap-3">
                       <h2 className="text-lg font-bold text-slate-100 md:text-xl">
-                        Silent Suffering Detector
+                        Saarthi (Wellness Tracker)
                       </h2>
                       <Badge risk={riskLevel} />
                     </div>

@@ -70,7 +70,7 @@ export default function Navbar({ onToggleSidebar }) {
 
 
 
-            <p className="text-sm font-semibold text-slate-100/95">Silent Suffering Detector</p>
+            <p className="text-sm font-semibold text-slate-100/95">Saarthi (Wellness Tracker)</p>
 
 
 

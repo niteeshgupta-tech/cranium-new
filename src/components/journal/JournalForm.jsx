@@ -20,8 +20,10 @@ export default function JournalForm({
       initial={{ opacity: 0, x: -12 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.35 }}
-      className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur"
+      className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur transition duration-300 hover:border-aurora/30"
     >
+      <div className="pointer-events-none absolute -left-16 top-4 h-32 w-72 rounded-full bg-gradient-to-r from-aurora/40 via-transparent to-lilac/10 blur-3xl opacity-80" />
+      <div className="pointer-events-none absolute right-0 top-20 h-24 w-40 rounded-full bg-gradient-to-br from-sky-300/20 to-transparent blur-3xl opacity-70" />
       <div className="flex items-center justify-between gap-3">
         <h2 className="text-lg font-bold text-slate-100">Daily Journal</h2>
         <button
@@ -44,7 +46,7 @@ export default function JournalForm({
         rows={12}
         maxLength={maxLength}
         placeholder="How was your day? What drained or energized you?"
-        className="mt-4 w-full resize-none rounded-2xl border border-white/10 bg-midnight/40 p-4 text-sm text-slate-100 outline-none transition focus:border-aurora/40"
+        className="mt-4 w-full resize-none rounded-2xl border border-white/10 bg-midnight/40 p-4 text-sm text-slate-100 outline-none transition duration-300 hover:border-white/20 focus:border-aurora/40 focus:ring-2 focus:ring-aurora/10"
       />
 
       <div className="mt-3 flex items-center justify-between">

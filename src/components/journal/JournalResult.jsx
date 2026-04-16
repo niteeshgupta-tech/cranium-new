@@ -35,8 +35,11 @@ export default function JournalResult({ result, loading }) {
       initial={{ opacity: 0, x: 12 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.35 }}
-      className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur"
+      whileHover={{ y: -2 }}
+      className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur transition duration-300 hover:border-aurora/20 hover:shadow-[0_20px_80px_rgba(167,139,250,0.18)]"
     >
+      <div className="pointer-events-none absolute -left-14 top-6 h-32 w-72 rounded-full bg-gradient-to-r from-lilac/30 via-transparent to-sky-200/10 blur-3xl opacity-80" />
+      <div className="pointer-events-none absolute right-0 top-16 h-24 w-44 rounded-full bg-gradient-to-br from-coral/20 to-transparent blur-3xl opacity-70" />
       <h3 className="text-lg font-bold text-slate-100">Wellness Insight</h3>
 
       <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">

@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 
 export default function JournalHistory({ items = [] }) {
   return (
-    <section className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+    <section className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur transition duration-300 hover:border-aurora/30">
+      <div className="pointer-events-none absolute -left-16 top-6 h-28 w-72 rounded-full bg-gradient-to-r from-aurora/30 via-transparent to-sky-200/10 blur-3xl opacity-80" />
+      <div className="pointer-events-none absolute right-0 top-20 h-24 w-44 rounded-full bg-gradient-to-br from-lilac/25 to-transparent blur-3xl opacity-70" />
       <h3 className="text-lg font-bold text-slate-100">Journal History</h3>
 
       {items.length === 0 ? (
@@ -18,7 +20,7 @@ export default function JournalHistory({ items = [] }) {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.25, delay: index * 0.04 }}
-              className="rounded-2xl border border-white/10 bg-midnight/35 p-4"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-midnight/35 p-4 transition duration-300 hover:-translate-y-1 hover:border-aurora/30 hover:shadow-[0_18px_46px_rgba(99,102,241,0.18)]"
             >
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <p className="text-sm font-semibold text-slate-100">{entry.mood || "Reflective"}</p>

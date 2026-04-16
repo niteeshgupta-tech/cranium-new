@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 import { motion } from "framer-motion";
 
-import { FiHome, FiActivity } from "react-icons/fi";
+import { FiHome, FiActivity, FiBookOpen } from "react-icons/fi";
 
 
 
@@ -13,6 +13,8 @@ const nav = [
   { to: "/", label: "Home", icon: FiHome },
 
   { to: "/dashboard", label: "Dashboard", icon: FiActivity },
+
+  { to: "/journal", label: "AI Journal", icon: FiBookOpen },
 
 ];
 

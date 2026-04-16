@@ -5,6 +5,7 @@ import Navbar from "./components/layout/Navbar";
 import Sidebar from "./components/layout/Sidebar";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
+import Journal from "./pages/Journal";
 import NotFound from "./pages/NotFound";
 
 function AnimatedRoutes() {
@@ -13,6 +14,7 @@ function AnimatedRoutes() {
   const element = useRoutes([
     { path: "/", element: <Home /> },
     { path: "/dashboard", element: <Dashboard /> },
+    { path: "/journal", element: <Journal /> },
     { path: "*", element: <NotFound /> },
   ]);
 

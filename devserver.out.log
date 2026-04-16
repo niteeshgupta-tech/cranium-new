@@ -1,0 +1,60 @@
+
+> frontend@1.0.0 start
+> react-scripts start
+
+Starting the development server...
+
+Compiled successfully!
+
+You can now view frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://10.47.20.211:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Failed to compile.
+
+Attempted import error: 'getJournalHistory' is not exported from '../api/axios' (imported as 'getJournalHistory').
+[1m[31mERROR[39m[22m in [1m./src/pages/Journal.jsx[39m[22m [1m[32m23:27-44[39m[22m
+[1mexport 'getJournalHistory' (imported as 'getJournalHistory') was [1m[31mnot found[39m[22m[1m in '../api/axios' (possible exports: [1m[32mapiClient, getAlerts, getDashboardStats, getTrends, postMoodCheckIn[39m[22m[1m)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/pages/Journal.jsx[39m[22m [1m[32m34:27-46[39m[22m
+[1mexport 'analyzeJournalEntry' (imported as 'analyzeJournalEntry') was [1m[31mnot found[39m[22m[1m in '../api/axios' (possible exports: [1m[32mapiClient, getAlerts, getDashboardStats, getTrends, postMoodCheckIn[39m[22m[1m)[39m[22m
+
+webpack compiled with [1m[31m2 errors[39m[22m
+Compiling...
+Failed to compile.
+
+Attempted import error: 'getJournalHistory' is not exported from '../api/axios' (imported as 'getJournalHistory').
+[1m[31mERROR[39m[22m in [1m./src/pages/Journal.jsx[39m[22m [1m[32m23:27-44[39m[22m
+[1mexport 'getJournalHistory' (imported as 'getJournalHistory') was [1m[31mnot found[39m[22m[1m in '../api/axios' (possible exports: [1m[32mapiClient, getAlerts, getDashboardStats, getTrends, postMoodCheckIn[39m[22m[1m)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/pages/Journal.jsx[39m[22m [1m[32m34:27-46[39m[22m
+[1mexport 'analyzeJournalEntry' (imported as 'analyzeJournalEntry') was [1m[31mnot found[39m[22m[1m in '../api/axios' (possible exports: [1m[32mapiClient, getAlerts, getDashboardStats, getTrends, postMoodCheckIn[39m[22m[1m)[39m[22m
+
+webpack compiled with [1m[31m2 errors[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m

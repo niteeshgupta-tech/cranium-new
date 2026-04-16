@@ -20,7 +20,14 @@ const resolveUserId = async (req) => {
   }
 
   const demoUser = await User.findOne({ email: DEMO_EMAIL }).lean();
-  return demoUser?._id;
+  if (demoUser?._id) {
+    return demoUser._id;
+  }
+
+  // If the seeded demo account is missing, fall back to any existing user so
+  // journal analysis still works for unauthenticated local/demo sessions.
+  const fallbackUser = await User.findOne({}, { _id: 1 }).sort({ createdAt: 1 }).lean();
+  return fallbackUser?._id || null;
 };
 
 const analyzeAndSaveJournal = async (req, res, next) => {
@@ -38,6 +45,10 @@ const analyzeAndSaveJournal = async (req, res, next) => {
     }
 
     const userId = await resolveUserId(req);
+    if (!userId) {
+      return res.status(503).json(errorResponse("No user is available for journal analysis"));
+    }
+
     const analysis = await analyzeJournal(content);
 
     const journal = await Journal.create({

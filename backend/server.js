@@ -9,6 +9,7 @@ const authRoutes = require("./routes/authRoutes");
 const dashboardRoutes = require("./routes/dashboardRoutes");
 const alertRoutes = require("./routes/alertRoutes");
 const moodRoutes = require("./routes/moodRoutes");
+const journalRoutes = require("./routes/journalRoutes");
 const { getTrends } = require("./controllers/dashboardController");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const { successResponse } = require("./utils/responseFormatter");
@@ -49,6 +50,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/alerts", alertRoutes);
 app.use("/api/mood", moodRoutes);
+app.use("/api/journal", journalRoutes);
 
 // Backward-compatible frontend alias
 app.get("/api/trends", getTrends);

@@ -46,3 +46,28 @@ export async function getTrends() {
   }
 }
 
+export async function analyzeJournalEntry(payload) {
+  try {
+    const res = await apiClient.post("/journal/analyze", payload);
+    return res.data;
+  } catch (e) {
+    return {
+      success: false,
+      message: e?.response?.data?.message || "Journal analysis failed",
+    };
+  }
+}
+
+export async function getJournalHistory() {
+  try {
+    const res = await apiClient.get("/journal/history");
+    return res.data;
+  } catch (e) {
+    return {
+      success: true,
+      message: "Journal history unavailable",
+      data: [],
+    };
+  }
+}
+
